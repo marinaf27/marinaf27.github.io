@@ -211,13 +211,14 @@ function muteAudio()
 {
   document.getElementById("unmuteAudio").disabled = false;
   document.getElementById("muteAudio").disabled = true;
-  client.disableAudio();
+  localStream.disableAudio();
+  localStream.muteAudio();
 }
 function unmuteAudio()
 {
   document.getElementById("unmuteAudio").disabled = true;
   document.getElementById("muteAudio").disabled = false;
-  client.enableAudio();
+  localStream.enableAudio();
 }
 
 function enableVideo()
