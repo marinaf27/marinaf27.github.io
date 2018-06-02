@@ -209,14 +209,14 @@ function unpublish() {
 
 function muteAudio()
 {
-  document.getElementById("unmuteVideo").disabled = false;
-  document.getElementById("muteVideo").disabled = true;
+  document.getElementById("unmuteAudio").disabled = false;
+  document.getElementById("muteAudio").disabled = true;
   client.disableAudio();
 }
 function unmuteAudio()
 {
-  document.getElementById("unmuteVideo").disabled = true;
-  document.getElementById("muteVideo").disabled = false;
+  document.getElementById("unmuteAudio").disabled = true;
+  document.getElementById("muteAudio").disabled = false;
   client.enableAudio();
 }
 
