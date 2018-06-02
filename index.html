@@ -225,13 +225,14 @@ function enableVideo()
 {
   document.getElementById("disableVideo").disabled = false;
   document.getElementById("enableVideo").disabled = true;
+  localStream.enableVideo();
   
 }
 function disableVideo()
 {
   document.getElementById("disableVideo").disabled = true;
   document.getElementById("enableVideo").disabled = false;
-  
+  localStream.disableVideo();
 }
 
 function getDevices() {
