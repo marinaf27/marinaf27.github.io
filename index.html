@@ -28,9 +28,13 @@ Host: <input id="video" type="checkbox" checked></input>
 <button id="publish" class="btn btn-primary" onclick="publish()">Publish</button>
 
 <button id="unpublish" class="btn btn-primary" onclick="unpublish()">Unpublish</button>
-<button id="muteVideo" class="btn btn-primary" onclick="muteVideo()">MuteVideo</button>
-<button id="unmuteVideo" class="btn btn-primary" onclick="unmuteVideo()">UnmuteVideo</button>
+<button id="muteAudio" class="btn btn-primary" onclick="muteAudio()">Mute</button>
+<button id="unmuteAudio" class="btn btn-primary" onclick="unmuteAudio()">Unmute</button>
+<button id="enableVideo" class="btn btn-primary" onclick="enableVideo()">EnableVideo</button>
+<button id="disableVideo" class="btn btn-primary" onclick="disableVideo()">DisableVideo</button>
+
 </div>
+
 </div>
 
     <!--style>
@@ -203,16 +207,29 @@ function unpublish() {
   });
 }
 
-function muteVideo()
+function muteAudio()
 {
   document.getElementById("unmuteVideo").disabled = false;
   document.getElementById("muteVideo").disabled = true;
-  
+  client.disableAudio();
 }
-function unmuteVideo()
+function unmuteAudio()
 {
   document.getElementById("unmuteVideo").disabled = true;
   document.getElementById("muteVideo").disabled = false;
+  client.enableAudio();
+}
+
+function enableVideo()
+{
+  document.getElementById("disableVideo").disabled = false;
+  document.getElementById("enableVideo").disabled = true;
+  
+}
+function disableVideo()
+{
+  document.getElementById("disableVideo").disabled = true;
+  document.getElementById("enableVideo").disabled = false;
   
 }
 
