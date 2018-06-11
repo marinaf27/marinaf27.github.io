@@ -4,6 +4,7 @@
 <title>Agora Web Sample</title>
 <link rel="stylesheet" href="vendor/bootstrap.min.css">
 <!-- Changed by MarinaF -->
+<link rel="stylesheet" href="css/main.css">
 <script src="AgoraRTCSDK-2.2.0.js"></script>
 <script src="vendor/jquery.js"></script>
 </head>
@@ -16,6 +17,28 @@
 <div class="select">
 <label for="videoSource">Video source: </label><select id="videoSource"></select>
 </div>
+</div>
+<div id="file_transfer" class="panel panel-default">
+<section>
+      <form id="fileInfo">
+        <input type="file" id="fileInput" name="files"/>
+      </form>
+
+      <div class="progress">
+        <div class="label">Sending status: </div>
+        <progress id="sendProgress" max="0" value="0"></progress>
+      </div>
+
+      <div class="progress">
+        <div class="label">Receive status: </div>
+        <progress id="receiveProgress" max="0" value="0"></progress>
+      </div>
+
+      <div id="bitrate"></div>
+      <a id="download"></a>
+      <span id="status"></span>
+
+    </section>
 </div>
 
 <div id="div_join" class="panel panel-default">
