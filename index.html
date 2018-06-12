@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="css/main.css">
 <script src="AgoraRTCSDK-2.2.0.js"></script>
 <script src="vendor/jquery.js"></script>
+<script src="js/main.js"></script>
+<script src="js/adapter.js"></script>
+
+
 </head>
 
 <body>
@@ -83,6 +87,7 @@ Host: <input id="video" type="checkbox" checked></input>
 
 <script language="javascript">
 
+
 if(!AgoraRTC.checkSystemRequirements()) {
   alert("browser is no support webRTC");
 }
@@ -106,6 +111,7 @@ var audioSelect = document.querySelector('select#audioSource');
 var videoSelect = document.querySelector('select#videoSource');
 
 function join() {
+
   document.getElementById("join").disabled = true;
   document.getElementById("video").disabled = true;
   var channel_key = null;
@@ -282,6 +288,7 @@ function getDevices() {
 //audioSelect.onchange = getDevices;
 //videoSelect.onchange = getDevices;
 getDevices();
+
 </script>
 </body>
 </html>
